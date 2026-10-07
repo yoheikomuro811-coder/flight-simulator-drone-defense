@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Defense: Strait of Taiwan</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="menu" class="menu visible">
+      <div class="card">
+        <p class="eyebrow">Defense Simulation</p>
+        <h1>Drone Defense: Strait of Taiwan</h1>
+        <p>
+          Protect the strategic defense grid from incoming hostile drones while managing an
+          economics-focused defense budget.
+        </p>
+        <label for="callsign">Pilot callsign</label>
+        <input id="callsign" type="text" maxlength="18" value="Pilot-Alpha" />
+        <button id="startButton">Launch Mission</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="panel left-panel">
+        <div class="title">Mission Control</div>
+        <div class="stat-row"><span>Health</span><strong id="health">100</strong></div>
+        <div class="stat-row"><span>Credits</span><strong id="credits">250</strong></div>
+        <div class="stat-row"><span>Wave</span><strong id="wave">1</strong></div>
+        <div class="stat-row"><span>Kills</span><strong id="kills">0</strong></div>
+      </div>
+
+      <div class="panel center-panel">
+        <div id="statusText">Hold the Strait. Defend the bunker.</div>
+      </div>
+
+      <div class="panel right-panel">
+        <div class="title">Objective</div>
+        <p>Eliminate hostile drones before they breach the defense ring.</p>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/game.js"></script>
+  </body>
+</html>
